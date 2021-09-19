@@ -28,7 +28,7 @@ public class Calculator implements Computable {
 
         String expr = expression.replace(" ", "");
 
-        fillLists(expr);
+        parseValuesAndOperations(expr);
         calculateAndReplacePriorityOperations();
 
         double result = calculate();
@@ -36,7 +36,7 @@ public class Calculator implements Computable {
         return result;
     }
 
-    public void fillLists(String expr) throws ExpressionFormatException {
+    private void parseValuesAndOperations(String expr) throws ExpressionFormatException {
 
         int i = 0;
         while (i < expr.length()) {
