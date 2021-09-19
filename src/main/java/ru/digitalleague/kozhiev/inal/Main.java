@@ -18,7 +18,9 @@ public class Main {
         String expression = reader.readLine();
 
         try {
-            calculator.compute(expression);
+            double result = calculator.compute(expression);
+
+            System.out.println("Answer of expression " + expression + " = " + result);
         } catch (ExpressionFormatException e) {
             e.printStackTrace();
         }
